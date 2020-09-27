@@ -49,6 +49,12 @@ body, html {
   padding-top: 50%; /* 8:5 Aspect Ratio */
 }
 
+.youtube_container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
 .responsive-iframe {
   position: absolute;
   top: 0;
@@ -174,7 +180,9 @@ body, html {
       Using Mozilla Deepspeech, we were able to adapt the network to a small dataset we collected containing filler words in speech.
       </p>
     </div>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/-AhpGatHHD4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="youtube_container">
+      <iframe class="responsive-iframe" width="560" height="315" src="https://www.youtube.com/embed/-AhpGatHHD4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 
     <div class="w3-col m3">
     <p> <b>Common Model of Cognition:</b>
