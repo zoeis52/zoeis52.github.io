@@ -66,6 +66,17 @@ body, html {
   height: 100%;
 }
 
+.project_container {
+  margin: 30px;
+  padding: 20px;
+}
+
+.w3-content-projects {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1600px) {
   .bgimg-1, .bgimg-2, .bgimg-3 {
@@ -148,7 +159,7 @@ body, html {
   </div>
   <p class="w3-large"><i class="fa fa-edit"></i>Data Visualization</p>
   <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">85%</div>
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
   </div>
   <p class="w3-large"><i class="fa fa-edit"></i>Writing</p>
   <div class="w3-light-grey">
@@ -165,62 +176,76 @@ body, html {
 </div>
 
 <!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
+<div class="w3-content-projects w3-container w3-padding-64" id="portfolio">
   <h3 class="w3-center">MY WORK</h3>
   <p class="w3-center"><em>Here are some of my projects, in chronological order from most to least recent.</em></p><br>
 
   <div class="w3-row-padding w3-center">
 
-    <div class="w3-col m3">
-      <p> <b>Exploring Brain Activity During Movement:</b> As part of CSE 512 - Data Visualization, I created a jupyter notebook to explore how 
-        brain activity from electrocorticography (ECoG) signals varies during different movement behaviors. Through this exploration, I found that brain signals
-        during hand movements with upwards trajectories were the cleanest, with a clear decrease in beta power (see figure on right).
-        You can explore the whole
-        <a href='Exploring Brain Activity During Movement.html'> jupyter notebook here. </a> </p>
-    </div>
-    <img src="images/movement_dir_power_annotated.png" style="width:60%" alt="Spectrograms for different movement directions show that upward movements have best signal.">
-
-    <div class="w3-col m3">
-      <p> <b>Transfer Learning with ECoG:</b>
-      My first project as a graduate student looked to improve brain decoders for electrocorticography (ECoG) signals through the use of transfer learning.
-      We found that models pretrained on a pool of subjects and then fine-tuned to the target subject had comparable performance to models trained on all the target subject's data.
-      Slides on our findings can be seen <a href="zoeis52.github.io/documents/HTNetShort_CNT_template.pdf" target="_blank"> here</a>,
-      and links to <a href="https://www.biorxiv.org/content/10.1101/2020.10.30.362558v1?rss=1"> the paper </a>
-      and <a href="https://github.com/BruntonUWBio/HTNet_generalized_decoding/tree/e178167122e0c1ce56fb5dfea6f02eb84d17181b">github repo </a>
-      </p>
-    </div>
-    <img src="images/fig_finetune_results.png" style="width:60%" alt="Fine-tuning HTNet improves performance, even when few training events are available.">
-
-    <div class="w3-col m3">
-      <p> <b>Deep -Um- Discourse:</b>
-      I was the team lead for my senior capstone project which developed a machine learning tool to detect filler words in speech.
-      Using Mozilla Deepspeech, we were able to adapt the network to a small dataset we collected containing filler words in speech.
-      </p>
-    </div>
-    <div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/-AhpGatHHD4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="project_container">
+      <div class="w3-col m3">
+        <p> <b>Exploring Brain Activity During Movement:</b> 
+          For CSE 512 - Data Visualization, I created a notebook to explore how brain activity from electrocorticography (ECoG) 
+          signals varies during different movement behaviors. 
+          Through this exploration, I found that brain signals during hand movements with upwards trajectories were the cleanest (see figure on right).
+          You can explore the whole
+          <a href='Exploring Brain Activity During Movement.html'> jupyter notebook here. </a> 
+        </p>
+      </div>
+      <img src="images/movement_dir_power_annotated.png" style="width:60%" alt="Spectrograms for different movement directions show that upward movements have best signal.">
     </div>
 
-    <div class="w3-col m3">
-    <p> <b>Common Model of Cognition:</b>
-      I spent a summer with Andrea Stocco at the University of Washington investigating the efficacy of the Common Model of Cognition (CMC) for human brain data.
-      Using publicly available fMRI data from the Human Connectome Project, I was able to determine that the CMC most accurately explains brain activity over other possible models.
-      See my<a href="zoeis52.github.io/documents/REUPoster.pdf" target="_blank"> poster</a> from the summer and my 5 minute talk for more details.
-    </p>
+    <div class="project_container">
+      <div class="w3-col m3">
+        <p> <b>Transfer Learning with ECoG:</b>
+        My first project as a graduate student improved brain decoders for ECoG signals through the use of transfer learning.
+        We found that models pretrained on a pool of subjects and then fine-tuned to the target subject had comparable performance to models trained on all the target subject's data.
+        Slides on our findings can be seen <a href="zoeis52.github.io/documents/HTNetShort_CNT_template.pdf" target="_blank"> here</a>,
+        and links to <a href="https://www.biorxiv.org/content/10.1101/2020.10.30.362558v1?rss=1"> the paper </a>
+        and <a href="https://github.com/BruntonUWBio/HTNet_generalized_decoding/tree/e178167122e0c1ce56fb5dfea6f02eb84d17181b">github repo </a>
+        </p>
+      </div>
+      <img src="images/fig_finetune_results.png" style="width:60%" alt="Fine-tuning HTNet improves performance, even when few training events are available.">
     </div>
-    <iframe src="zoeis52.github.io/documents/REUPoster.pdf" width="75%" height="500px"> </iframe>
-    <div class="w3-col m3"> <p> </p> </div>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/YMyKKKn4Dfc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <div class="project_container">
+      <div class="w3-col m3">
+        <p> <b>Deep -Um- Discourse:</b>
+        I was the team lead for my senior capstone project which developed a machine learning tool to detect filler words in speech.
+        Using Mozilla Deepspeech, we were able to adapt the network to a small dataset we collected containing filler words in speech.
+        </p>
+      </div>
+      <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-AhpGatHHD4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="project_container">
+      <div class="w3-col m3">
+        <p> <b>Common Model of Cognition:</b>
+          I spent a summer with Andrea Stocco at the University of Washington investigating the efficacy of the Common Model of Cognition (CMC) for human brain data.
+          Using publicly available fMRI data from the Human Connectome Project, I was able to determine that the CMC most accurately explains brain activity over other possible models.
+          See my<a href="zoeis52.github.io/documents/REUPoster.pdf" target="_blank"> poster</a> from the summer and my 5 minute talk for more details.
+        </p>
+      </div>
+      <iframe src="zoeis52.github.io/documents/REUPoster.pdf" width="75%" height="500px"> </iframe>
+      <!-- use this empty div to create space -->
+      <div class="w3-col m3"> <p> </p> </div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/YMyKKKn4Dfc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="project_container">
+      <div class="w3-col m3">
+        <p> <b>GenderMag:</b>
+          I investigated possible design solutions for two cognitive styles (information processing and learning),
+          which was the focus of my undergrad <a href="https://ir.library.oregonstate.edu/concern/honors_college_theses/1n79h977c"> honors thesis</a>.
+          The video here shows these two styles in action, and how they influence the way users interact with software.
+          Visit the <a href="https://gendermag.org/index.php"> GenderMag website </a> for more details. </p>
+      </div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/YQwElUH1Wvs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 
 
-    <div class="w3-col m3">
-      <p> <b>GenderMag:</b>
-        I investigated possible design solutions for two cognitive styles (information processing and learning),
-        which was the focus of my undergrad <a href="https://ir.library.oregonstate.edu/concern/honors_college_theses/1n79h977c"> honors thesis</a>.
-        The video here shows these two styles in action, and how they influence the way users interact with software.
-        Visit the <a href="https://gendermag.org/index.php"> GenderMag website </a> for more details. </p>
-    </div>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/YQwElUH1Wvs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 
 
